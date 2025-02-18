@@ -1,0 +1,45 @@
+16 Feb 2025
+
+Belajar Rust
+local documentation : rustup doc
+
+Untuk windows:
+download rustup https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe
+
+$ rustc --version
+
+rustup default stable-x86_64-pc-windows-gnu
+
+main.rs
+fn main(){
+    print!("Hello World!");
+  }
+
+
+rustc main.rs
+./main.exe
+
+cargo 
+buat kalau ada dependencies, package manager
+
+cargo --version
+
+cargo new hello_cargo
+
+cd hello_cargo
+cargo build
+cargo run
+cargo check 
+
+Recap : 
+
+    We can create a project using cargo new.
+    We can build a project using cargo build.
+    We can build and run a project in one step using cargo run.
+    We can build a project without producing a binary to check for errors using cargo check.
+    Instead of saving the result of the build in the same directory as our code, Cargo stores it in the target/debug directory.
+
+
+2. Programming a Guessing Game
+$ cargo new guessing_game
+$ cd guessing_game
