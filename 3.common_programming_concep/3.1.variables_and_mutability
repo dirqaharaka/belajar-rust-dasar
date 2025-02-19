@@ -1,0 +1,55 @@
+default variable = immutable (kekal)
+
+juka ingin muttable gunakan mut
+
+fn main() {
+    let mut x = 5;
+    println!("The value of x is: {x}");
+    x = 6;
+    println!("The value of x is: {x}");
+}
+
+Constants
+
+Seperti variabel yang tidak dapat diubah, konstanta adalah nilai yang terikat pada nama dan tidak diizinkan untuk berubah, tetapi ada beberapa perbedaan antara konstanta dan variabel.
+contant selalu immutable
+tidak boleh menggunakan mut di Constants
+
+contoh : 
+
+const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+
+
+Shadowing
+
+Bisa mendeklarasikan variable yang sama, 
+
+contoh :
+
+fn main() {
+    let x = 5;
+
+    let x = x + 1;
+
+    {
+        let x = x * 2;
+        println!("The value of x in the inner scope is: {x}");
+    }
+
+    println!("The value of x is: {x}");
+}
+
+result : 
+
+The value of x in the inner scope is: 12
+The value of x is: 6
+
+
+INI BENAR
+let spaces = "   ";
+let spaces = spaces.len();
+
+
+INI SALAH 
+let mut spaces = "   ";
+spaces = spaces.len();
